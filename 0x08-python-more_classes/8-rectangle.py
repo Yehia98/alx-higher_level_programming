@@ -74,7 +74,7 @@ class Rectangle:
         Args:
             rect_1: first rectangle.
             rect_2: 2nd rectangle.
-            
+
         Raises:
                 TypeError: if rect_1 or rect_2 are not instances
                 of Rectangel
