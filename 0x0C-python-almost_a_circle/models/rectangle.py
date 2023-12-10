@@ -83,3 +83,24 @@ class Rectangle(Base):
         """user friendly representation of the object items"""
         return '[Rectangle] ({}) {}/{} - {}/{}'.\
             format(self.id, self.x, self.y, self.width, self.height)
+
+    def arg_list(self, id=None, width=None, height=None, x=None, y=None):
+        """unpacking **kw/*args into the instance attribute"""
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
+    def update(self, *args, **kwargs):
+        """a fucntion that assigns an argument to each attribute
+        whether with keywords or not"""
+        if args:
+            self.arg_list(*args)
+        elif kwargs:
+            self.arg_list(**kwargs)
