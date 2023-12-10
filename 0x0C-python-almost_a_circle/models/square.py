@@ -23,3 +23,22 @@ class Square(Rectangle):
     def size(self, value):
         self.width = value
         self.height = value
+
+    def sq_arg_list(self, id=None, size=None, x=None, y=None):
+        """unpacking **kw/*args into the instance attribute"""
+        if id is not None:
+            self.id = id
+        if size is not None:
+            self.size = size
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
+    def update(self, *args, **kwargs):
+        """a fucntion that assigns an argument to each attribute
+        whether with keywords or not"""
+        if args:
+            self.sq_arg_list(*args)
+        elif kwargs:
+            self.sq_arg_list(**kwargs)
