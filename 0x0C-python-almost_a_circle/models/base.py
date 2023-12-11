@@ -45,11 +45,11 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """returns an instance with all attributes already set"""
-    if cls is Rectangle:
-        new = Rectangle(1, 1)
-    elif cls is Square:
-        new = Square(1)
-    else:
-        new = None
-    new.update(**dictionary)
-    return new
+        if cls is Rectangle:
+            new = Rectangle(1, 1)
+        elif cls is Square:
+            new = Square(1)
+        else:
+            new = None
+        new.update(**dictionary)
+        return new
