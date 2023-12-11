@@ -77,7 +77,7 @@ class Rectangle(Base):
         """a function that prints the Rectangle with the character #"""
         display = '\n' * self.y + \
                   (' ' * self.x + '#' * self.width + '\n') * self.height
-        print(display, end=" ")
+        print(display, end="")
 
     def __str__(self):
         """user friendly representation of the object items"""
