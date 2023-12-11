@@ -60,6 +60,6 @@ class Base:
         from os import path
         file = "{}.json".format(cls.__name__)
         if not path.isfile(file):
-            returnn []
+            return []
         with open(file, "r", encoding="utf-8") as fl:
             return [cls.create(**d) for d in cls.from_json_string(fl.read()]
