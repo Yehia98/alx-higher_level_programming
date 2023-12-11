@@ -42,3 +42,9 @@ class Square(Rectangle):
             self.sq_arg_list(*args)
         elif kwargs:
             self.sq_arg_list(**kwargs)
+
+    def to_dictionary(self):
+        """a function that returns the dictionary representation
+        of a Square"""
+        return {"id": self.id, "size": self.__width, "x": self.__x,
+                "Y": self.__y}
