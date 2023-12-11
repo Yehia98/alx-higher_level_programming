@@ -46,7 +46,7 @@ class Base:
     def create(cls, **dictionary):
         """returns an instance with all attributes already set"""
     if cls is Rectangle:
-        new = Rectangle(, 1)
+        new = Rectangle(1, 1)
     elif cls is Square:
         new = Square(1)
     else:
